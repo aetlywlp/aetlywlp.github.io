@@ -1061,3 +1061,334 @@ hr {
   border: 1px solid rgba(100, 116, 139, 0.3);
 }
 
+/* ==================== Homepage Profile Hero Section ==================== */
+.profile-hero-section {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.profile-hero-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .profile-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.profile-image-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.5);
+  transition: all 0.4s ease;
+  object-fit: cover;
+}
+
+.profile-hero-image:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 0 60px rgba(34, 211, 238, 0.8);
+}
+
+.profile-hero-content {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, var(--accent-light), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.profile-title {
+  font-size: 1.4em;
+  color: var(--text-light);
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.profile-affiliation {
+  font-size: 1.1em;
+  color: var(--accent-light);
+  margin: 0 0 10px 0;
+}
+
+.profile-affiliation i {
+  margin-right: 8px;
+}
+
+.profile-tagline {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin: 15px 0 25px 0;
+  opacity: 0.9;
+}
+
+.profile-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .profile-links {
+    justify-content: center;
+  }
+}
+
+.profile-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: rgba(100, 116, 139, 0.3);
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.profile-link-btn:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
+}
+
+.profile-link-btn.primary {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.profile-link-btn.primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+/* ==================== Intro Section ==================== */
+.intro-section {
+  background: rgba(51, 65, 85, 0.4);
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.intro-title {
+  font-size: 1.6em;
+  color: var(--accent-light);
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intro-content p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== Awards Section ==================== */
+.awards-section {
+  margin-bottom: 40px;
+}
+
+.awards-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.award-card {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.award-card.gold::before { background: linear-gradient(180deg, #ffd700, #ffb700); }
+.award-card.silver::before { background: linear-gradient(180deg, #c0c0c0, #a0a0a0); }
+.award-card.bronze::before { background: linear-gradient(180deg, #cd7f32, #a05a2c); }
+
+.award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.award-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.award-card.gold .award-icon { background: linear-gradient(135deg, #ffd700, #ffb700); color: #1a1a1a; }
+.award-card.silver .award-icon { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #1a1a1a; }
+.award-card.bronze .award-icon { background: linear-gradient(135deg, #cd7f32, #a05a2c); color: white; }
+
+.award-content h3 {
+  color: var(--text-dark);
+  font-size: 1.2em;
+  margin: 0 0 8px 0;
+}
+
+.award-event {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+}
+
+.award-project {
+  color: var(--accent-light);
+  font-size: 0.85em;
+  font-style: italic;
+  margin: 0;
+}
+
+.award-year {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ==================== Skills Showcase Section ==================== */
+.skills-showcase-section {
+  margin-bottom: 40px;
+}
+
+.skills-showcase-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background: rgba(51, 65, 85, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-color);
+}
+
+.skill-category h3 {
+  color: var(--accent-light);
+  font-size: 1em;
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(100, 116, 139, 0.3);
+  color: var(--text-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+}
+
+.skill-tag.proficient {
+  background: rgba(6, 182, 212, 0.3);
+  color: var(--accent-light);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+}
+
+.skill-category:hover .skill-tag {
+  background: var(--accent-color);
+  color: white;
+}
+
