@@ -1,0 +1,1623 @@
+/* ========================================
+   Robot Learning Blog - Custom Styles
+   科技感与专业性的完美结合
+   ======================================== */
+
+/* ==================== 配色方案 ==================== */
+:root {
+  /* 主色调：深蓝科技风 */
+  --primary-color: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-light: #3b82f6;
+
+  /* 强调色：青色/科技绿 */
+  --accent-color: #06b6d4;
+  --accent-light: #22d3ee;
+  --accent-dark: #0891b2;
+
+  /* 背景色 */
+  --body-bg-color: #0f172a;
+  --content-bg-color: #1e293b;
+  --card-bg-color: #334155;
+
+  /* 文字颜色 */
+  --text-color: #e2e8f0;
+  --text-light: #cbd5e1;
+  --text-dark: #f1f5f9;
+
+  /* 链接颜色 */
+  --link-color: #60a5fa;
+  --link-hover-color: #3b82f6;
+
+  /* 阴影效果 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+
+  /* 渐变效果 */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-tech: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-bg: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+}
+
+/* ==================== 整体背景 ==================== */
+body {
+  background: var(--body-bg-color);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+  color: var(--text-color);
+}
+
+/* 动态背景网格 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== 顶部横条 - 科技感 ==================== */
+.headband {
+  height: 4px;
+  background: linear-gradient(90deg,
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #4facfe 75%,
+    #00f2fe 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ==================== 头部样式 ==================== */
+.header {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.site-brand-container {
+  background: transparent;
+}
+
+.site-title {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+  transition: all 0.3s ease;
+}
+
+.site-title:hover {
+  color: var(--accent-light);
+  text-shadow: 0 0 30px rgba(34, 211, 238, 0.8);
+}
+
+.site-subtitle {
+  color: var(--accent-light);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Logo 线条特效 */
+.logo-line-before i,
+.logo-line-after i {
+  background: var(--gradient-tech);
+  height: 2px;
+}
+
+/* ==================== 导航菜单 ==================== */
+.menu {
+  background: transparent;
+}
+
+.menu-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.menu-item a {
+  color: var(--text-light);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu-item a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-tech);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.menu-item a:hover {
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.menu-item a:hover::before {
+  width: 80%;
+}
+
+/* 移动端菜单切换按钮 */
+.toggle-line {
+  background: var(--accent-light);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+/* ==================== 主内容区 ==================== */
+.main {
+  background: transparent;
+}
+
+.content-wrap {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  padding: 30px;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+/* ==================== 文章卡片 ==================== */
+.post-block {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-tech);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post-block:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.post-block:hover::before {
+  opacity: 1;
+}
+
+/* 文章标题 */
+.post-title {
+  color: var(--text-dark);
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  transition: all 0.3s ease;
+}
+
+.post-title-link {
+  color: var(--text-dark);
+  border: none;
+  background: linear-gradient(to right, var(--accent-light), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.post-title-link:hover {
+  background: linear-gradient(to right, var(--primary-light), var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+/* 文章元信息 */
+.post-meta {
+  color: var(--text-light);
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.post-meta-item-icon {
+  color: var(--accent-color);
+}
+
+/* 文章内容 */
+.post-body {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.post-body a {
+  color: var(--link-color);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.3);
+  transition: all 0.3s ease;
+}
+
+.post-body a:hover {
+  color: var(--link-hover-color);
+  border-bottom-color: var(--link-hover-color);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* 文章结束标记 */
+.post-eof {
+  margin: 40px 0 20px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-color) 50%,
+    transparent 100%);
+}
+
+/* ==================== 侧边栏 ==================== */
+.sidebar {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(100, 116, 139, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar-inner {
+  background: transparent;
+}
+
+/* 作者信息卡片 */
+.site-author {
+  text-align: center;
+  padding: 20px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.site-author-image {
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+  transition: all 0.3s ease;
+  padding: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.site-author-image:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.8);
+}
+
+.site-author-name {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 15px 0 10px;
+}
+
+.site-description {
+  color: var(--text-light);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* 统计信息 */
+.site-state {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.site-state-item {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.site-state-item:hover {
+  transform: translateY(-3px);
+}
+
+.site-state-item a {
+  border: none;
+  color: var(--text-color);
+}
+
+.site-state-item-count {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--accent-light);
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.site-state-item-name {
+  display: block;
+  font-size: 0.9em;
+  color: var(--text-light);
+  margin-top: 5px;
+}
+
+/* 社交链接 */
+.links-of-author {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.links-of-author-item a {
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.links-of-author-item a:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+}
+
+/* 侧边栏导航 */
+.sidebar-nav {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.sidebar-nav li {
+  color: var(--text-color);
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav li:hover,
+.sidebar-nav li.sidebar-nav-active {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* ==================== 返回顶部按钮 ==================== */
+.back-to-top {
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(6, 182, 212, 0.5);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(34, 211, 238, 0.3);
+}
+
+.back-to-top:hover {
+  background: var(--accent-light);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.8);
+}
+
+/* ==================== 页脚 ==================== */
+.footer {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
+  color: var(--text-light);
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+.copyright,
+.powered-by {
+  color: var(--text-light);
+}
+
+.footer a {
+  color: var(--link-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-light);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+/* ==================== 代码块美化 ==================== */
+.highlight,
+pre {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+code {
+  background: rgba(51, 65, 85, 0.6);
+  color: var(--accent-light);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.highlight .gutter pre {
+  background: rgba(30, 41, 59, 0.6);
+  color: var(--text-light);
+}
+
+.highlight .code pre {
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--text-color);
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 991px) {
+  .content-wrap {
+    padding: 20px;
+  }
+
+  .post-block {
+    padding: 20px;
+  }
+
+  .site-state {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ==================== 滚动条美化 ==================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+}
+
+/* ==================== 选中文本样式 ==================== */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: var(--text-dark);
+}
+
+/* ==================== 加载动画 ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.use-motion .post-block {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ==================== 表格样式 ==================== */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+th {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-light);
+  font-weight: 700;
+}
+
+tbody tr:nth-of-type(odd) {
+  background: rgba(51, 65, 85, 0.3);
+}
+
+tbody tr:hover {
+  background: rgba(6, 182, 212, 0.1);
+  transition: all 0.3s ease;
+}
+
+td, th {
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+/* ==================== 引用块样式 ==================== */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  background: rgba(51, 65, 85, 0.3);
+  padding: 15px 20px;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==================== 按钮样式 ==================== */
+.btn {
+  background: var(--accent-color);
+  color: white;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+  color: white;
+}
+
+/* ==================== HR分割线 ==================== */
+hr {
+  background-image: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-color) 50%,
+    transparent 100%);
+  height: 2px;
+  border: none;
+  margin: 40px 0;
+}
+
+/* ==================== 研究方向展示区域 ==================== */
+.research-areas-section {
+  margin-bottom: 60px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.research-areas-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent-color) 50%,
+    transparent 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--accent-light), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.section-title i {
+  margin-right: 15px;
+  color: var(--accent-color);
+  -webkit-text-fill-color: var(--accent-color);
+  animation: rotateRobot 3s ease-in-out infinite;
+}
+
+@keyframes rotateRobot {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 1.1em;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.research-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .research-areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-card {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.research-card:hover::before {
+  opacity: 1;
+}
+
+.research-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3);
+  border-color: var(--accent-color);
+}
+
+.research-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--gradient-tech);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
+  transition: all 0.3s ease;
+}
+
+.research-card:hover .research-icon {
+  transform: scale(1.1) rotate(360deg);
+  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.6);
+}
+
+.research-icon i {
+  font-size: 2em;
+  color: white;
+}
+
+.research-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.research-card:hover .research-title {
+  color: var(--accent-light);
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.research-description {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.research-tags .tag {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-light);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.research-card:hover .research-tags .tag {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.4);
+}
+
+/* ==================== 侧边栏研究方向快捷入口 ==================== */
+.research-quick-links {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.research-quick-links h3 {
+  color: var(--accent-light);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.research-quick-links h3 i {
+  font-size: 1.2em;
+}
+
+.research-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-links-list li {
+  margin-bottom: 10px;
+}
+
+.research-links-list a {
+  color: var(--text-light);
+  border: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  background: rgba(100, 116, 139, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.research-links-list a i {
+  color: var(--accent-color);
+  font-size: 0.9em;
+}
+
+.research-links-list a:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.4);
+}
+
+.research-links-list a:hover i {
+  color: white;
+}
+
+/* ==================== 文章分类标签增强 ==================== */
+.post-category {
+  display: inline-block;
+  background: var(--gradient-tech);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.post-category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.5);
+}
+
+/* ==================== 技能进度条（可选） ==================== */
+.skills-section {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  color: var(--text-light);
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--gradient-tech);
+  border-radius: 10px;
+  transition: width 1s ease;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* ==================== 时间线样式（用于归档页） ==================== */
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% + 10px);
+  background: linear-gradient(180deg, var(--accent-color) 0%, transparent 100%);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* ==================== About Page & Resume Styling ==================== */
+.post-body h2 {
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+  position: relative;
+}
+
+.post-body h2::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-tech);
+}
+
+.post-body h3 {
+  color: var(--accent-light);
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.post-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-body ul li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.post-body ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 10px;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.post-body strong {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.post-body em {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Profile Image Styling */
+.post-body img[alt="Li Haoxuan"] {
+  transition: all 0.3s ease;
+}
+
+.post-body img[alt="Li Haoxuan"]:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
+}
+
+/* Icon in Contact Section */
+.post-body .fa,
+.post-body .fab {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+/* Honors/Awards Section Enhancement */
+.post-body ul li:has(strong:contains("Prize")) {
+  background: rgba(51, 65, 85, 0.3);
+  border-left: 4px solid var(--accent-color);
+  padding: 15px 15px 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Skills Section Grid */
+.post-body ul li:has(strong:contains(":")) {
+  background: rgba(51, 65, 85, 0.2);
+  padding: 10px 15px 10px 30px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.post-body ul li:has(strong:contains(":")):hover {
+  background: rgba(6, 182, 212, 0.1);
+  transform: translateX(5px);
+}
+
+/* Professional Header for About Page */
+.post-body > div[style*="text-align: center"] {
+  background: rgba(51, 65, 85, 0.3);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+/* ==================== Homepage Profile Hero Section ==================== */
+.profile-hero-section {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.profile-hero-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .profile-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.profile-image-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.5);
+  transition: all 0.4s ease;
+  object-fit: cover;
+}
+
+.profile-hero-image:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 0 60px rgba(34, 211, 238, 0.8);
+}
+
+.profile-hero-content {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, var(--accent-light), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.profile-title {
+  font-size: 1.4em;
+  color: var(--text-light);
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.profile-affiliation {
+  font-size: 1.1em;
+  color: var(--accent-light);
+  margin: 0 0 10px 0;
+}
+
+.profile-affiliation i {
+  margin-right: 8px;
+}
+
+.profile-tagline {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin: 15px 0 25px 0;
+  opacity: 0.9;
+}
+
+.profile-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .profile-links {
+    justify-content: center;
+  }
+}
+
+.profile-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: rgba(100, 116, 139, 0.3);
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.profile-link-btn:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
+}
+
+.profile-link-btn.primary {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.profile-link-btn.primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+/* ==================== Intro Section ==================== */
+.intro-section {
+  background: rgba(51, 65, 85, 0.4);
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.intro-title {
+  font-size: 1.6em;
+  color: var(--accent-light);
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intro-content p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== Awards Section ==================== */
+.awards-section {
+  margin-bottom: 40px;
+}
+
+.awards-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.award-card {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.award-card.gold::before { background: linear-gradient(180deg, #ffd700, #ffb700); }
+.award-card.silver::before { background: linear-gradient(180deg, #c0c0c0, #a0a0a0); }
+.award-card.bronze::before { background: linear-gradient(180deg, #cd7f32, #a05a2c); }
+
+.award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.award-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.award-card.gold .award-icon { background: linear-gradient(135deg, #ffd700, #ffb700); color: #1a1a1a; }
+.award-card.silver .award-icon { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #1a1a1a; }
+.award-card.bronze .award-icon { background: linear-gradient(135deg, #cd7f32, #a05a2c); color: white; }
+
+.award-content h3 {
+  color: var(--text-dark);
+  font-size: 1.2em;
+  margin: 0 0 8px 0;
+}
+
+.award-event {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+}
+
+.award-project {
+  color: var(--accent-light);
+  font-size: 0.85em;
+  font-style: italic;
+  margin: 0;
+}
+
+.award-year {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ==================== Skills Showcase Section ==================== */
+.skills-showcase-section {
+  margin-bottom: 40px;
+}
+
+.skills-showcase-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background: rgba(51, 65, 85, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-color);
+}
+
+.skill-category h3 {
+  color: var(--accent-light);
+  font-size: 1em;
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(100, 116, 139, 0.3);
+  color: var(--text-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+}
+
+.skill-tag.proficient {
+  background: rgba(6, 182, 212, 0.3);
+  color: var(--accent-light);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+}
+
+.skill-category:hover .skill-tag {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* ==================== Education Section ==================== */
+.education-section {
+  margin-bottom: 40px;
+}
+
+.education-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.education-card {
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+.education-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  color: white;
+}
+
+.education-content h3 {
+  color: var(--text-dark);
+  font-size: 1.1em;
+  margin: 0 0 8px 0;
+}
+
+.education-degree {
+  color: var(--accent-light);
+  font-size: 0.95em;
+  margin: 0 0 5px 0;
+}
+
+.education-period {
+  color: var(--text-light);
+  font-size: 0.85em;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ==================== Contact Section ==================== */
+.contact-section {
+  margin-bottom: 40px;
+}
+
+.contact-section .section-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-content > p {
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
+}
+
+.contact-card i {
+  font-size: 1.4em;
+  color: var(--accent-light);
+}
+
+.contact-card:hover i {
+  color: white;
+}
+
+.contact-card span {
+  font-weight: 500;
+}
+
+/* ==================== Footer Enhancements ==================== */
+.footer {
+  background: rgba(15, 23, 42, 0.95);
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
+  padding: 30px 0;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.copyright {
+  color: var(--text-light);
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.copyright .separator {
+  color: var(--accent-color);
+}
+
+.copyright .with-love i {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ==================== Back to Top Button ==================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.6);
+}
+
+/* ==================== Remove Sidebar for Portfolio ==================== */
+.sidebar,
+.sidebar-toggle,
+#sidebar-dimmer {
+  display: none !important;
+}
+
+.main-inner {
+  padding: 0;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+@media (max-width: 768px) {
+  .content-wrap {
+    padding: 15px 20px;
+  }
+
+  .profile-hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+

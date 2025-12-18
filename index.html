@@ -1,565 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#0f172a">
+
+  <title>李昊轩 | Robotics & AI Researcher</title>
+
+  <meta name="description" content="李昊轩 - 华中科技大学本科生，专注于机器人学习、具身智能、VLA模型研究。FOCUS团队副队长，Dian团队成员。">
+  <meta name="keywords" content="李昊轩, 机器人学习, 具身智能, VLA, 华中科技大学, HUST, Robotics, AI">
+  <meta name="author" content="李昊轩">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="李昊轩 | Robotics & AI Researcher">
+  <meta property="og:description" content="华中科技大学本科生 | 机器人学习与具身智能研究">
+  <meta property="og:locale" content="zh_CN">
+
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/custom.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="This blog is dedicated to documenting and sharing my journey in studying robotics.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lee Haoxuan">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Lee Haoxuan">
-<meta property="og:description" content="This blog is dedicated to documenting and sharing my journey in studying robotics.">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Li Haoxuan">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Lee Haoxuan</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body>
   <div class="container use-motion">
+    <!-- Top Bar -->
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="site-brand-container">
+          <div class="site-meta">
+            <a href="/" class="brand" rel="start">
+              <h1 class="site-title">李昊轩</h1>
+            </a>
+            <p class="site-subtitle">Robotics & Embodied AI Researcher</p>
+          </div>
+        </div>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Lee Haoxuan</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Eclipse first， the rest nowhere</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
+        <nav class="site-nav">
+          <ul id="menu" class="main-menu menu">
+            <li class="menu-item">
+              <a href="#about"><i class="fa fa-user fa-fw"></i>About</a>
+            </li>
+            <li class="menu-item">
+              <a href="#education"><i class="fa fa-graduation-cap fa-fw"></i>Education</a>
+            </li>
+            <li class="menu-item">
+              <a href="#awards"><i class="fa fa-trophy fa-fw"></i>Awards</a>
+            </li>
+            <li class="menu-item">
+              <a href="#skills"><i class="fa fa-code fa-fw"></i>Skills</a>
+            </li>
+            <li class="menu-item">
+              <a href="#research"><i class="fa fa-flask fa-fw"></i>Research</a>
+            </li>
+            <li class="menu-item">
+              <a href="#contact"><i class="fa fa-envelope fa-fw"></i>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
+    <!-- Main Content -->
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
+          <div class="content">
 
-          <div class="content index posts-expand">
+            <!-- Profile Hero Section -->
+            <section id="about" class="profile-hero-section">
+              <div class="profile-hero-container">
+                <div class="profile-image-wrapper">
+                  <img src="/uploads/bjps.jpg" alt="李昊轩" class="profile-hero-image">
+                </div>
+                <div class="profile-hero-content">
+                  <h1 class="profile-name">李昊轩</h1>
+                  <p class="profile-title">Robotics & Embodied AI Researcher</p>
+                  <p class="profile-affiliation">
+                    <i class="fa fa-university"></i>
+                    华中科技大学 · 机械设计制造及其自动化
+                  </p>
+                  <p class="profile-tagline">"Eclipse first, the rest nowhere"</p>
+                  <div class="profile-links">
+                    <a href="https://github.com/aetlywlp" target="_blank" class="profile-link-btn">
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:1040831491@qq.com" class="profile-link-btn">
+                      <i class="fa fa-envelope"></i> Email
+                    </a>
+                    <a href="#contact" class="profile-link-btn primary">
+                      <i class="fa fa-paper-plane"></i> Contact Me
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-      <!-- Robot Learning Research Areas Section -->
-      <section class="research-areas-section">
-        <div class="section-header">
-          <h2 class="section-title">
-            <i class="fas fa-robot"></i>
-            Robot Learning Research Areas
-          </h2>
-          <p class="section-subtitle">Exploring the frontiers of robotics and machine learning</p>
+            <!-- About Section -->
+            <section class="intro-section">
+              <div class="intro-content">
+                <h2 class="intro-title"><i class="fas fa-user-graduate"></i> About Me</h2>
+                <p>I am an undergraduate student at <strong>Huazhong University of Science and Technology (HUST)</strong>, majoring in Mechanical Design, Manufacturing, and Automation. My research focuses on <strong>Robot Learning</strong>, <strong>Embodied Intelligence</strong>, and <strong>Vision-Language-Action (VLA) models</strong>.</p>
+                <p>I am passionate about bridging the gap between theoretical AI research and practical robotic applications. My goal is to develop intelligent robots that can robustly perceive, decide, and execute in real-world environments.</p>
+              </div>
+            </section>
+
+            <!-- Education & Experience Section -->
+            <section id="education" class="education-section">
+              <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Experience</h2>
+              <div class="education-grid">
+                <div class="education-card">
+                  <div class="education-icon"><i class="fas fa-university"></i></div>
+                  <div class="education-content">
+                    <h3>Huazhong University of Science and Technology</h3>
+                    <p class="education-degree">B.E. in Mechanical Design, Manufacturing, and Automation</p>
+                    <p class="education-period">2021 - 2025 (Expected)</p>
+                  </div>
+                </div>
+                <div class="education-card">
+                  <div class="education-icon"><i class="fas fa-users"></i></div>
+                  <div class="education-content">
+                    <h3>FOCUS Team (Qiming College)</h3>
+                    <p class="education-degree">Deputy Team Leader & Project Manager</p>
+                    <p class="education-period">Jan 2025 - Present</p>
+                  </div>
+                </div>
+                <div class="education-card">
+                  <div class="education-icon"><i class="fas fa-lightbulb"></i></div>
+                  <div class="education-content">
+                    <h3>Dian Team (Qiming College)</h3>
+                    <p class="education-degree">Official Member</p>
+                    <p class="education-period">Sep 2024 - Present</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Awards Section -->
+            <section id="awards" class="awards-section">
+              <h2 class="section-title"><i class="fas fa-trophy"></i> Honors & Awards</h2>
+              <div class="awards-grid">
+                <div class="award-card gold">
+                  <div class="award-icon"><i class="fas fa-medal"></i></div>
+                  <div class="award-content">
+                    <h3>National First Prize</h3>
+                    <p class="award-event">"Challenge Cup" China College Students' Entrepreneurship Plan Competition - AI Special Track</p>
+                    <p class="award-project">Edge-deployable dual-arm robot VLA operation algorithm</p>
+                    <span class="award-year">2024</span>
+                  </div>
+                </div>
+                <div class="award-card bronze">
+                  <div class="award-icon"><i class="fas fa-medal"></i></div>
+                  <div class="award-content">
+                    <h3>National Third Prize</h3>
+                    <p class="award-event">"Challenge Cup" Special Competition</p>
+                    <p class="award-project">Intelligent Q&A system based on LLMs for South-to-North Water Diversion</p>
+                    <span class="award-year">2024</span>
+                  </div>
+                </div>
+                <div class="award-card silver">
+                  <div class="award-icon"><i class="fas fa-medal"></i></div>
+                  <div class="award-content">
+                    <h3>Provincial Second Prize</h3>
+                    <p class="award-event">China University Intelligent Robot Creative Competition</p>
+                    <p class="award-project">"Feisuo" Home Service Robot</p>
+                    <span class="award-year">2024</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-showcase-section">
+              <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h3><i class="fas fa-laptop-code"></i> Programming</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag proficient">Python</span>
+                    <span class="skill-tag proficient">C/C++</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3><i class="fas fa-brain"></i> Deep Learning</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag proficient">PyTorch</span>
+                    <span class="skill-tag">Hugging Face Transformers</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3><i class="fas fa-robot"></i> Robotics</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">ROS2</span>
+                    <span class="skill-tag">Isaac Lab</span>
+                    <span class="skill-tag">MuJoCo</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3><i class="fas fa-microchip"></i> Embedded Systems</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag proficient">STM32</span>
+                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">Jetson</span>
+                    <span class="skill-tag">Pixhawk</span>
+                    <span class="skill-tag">CAN/SPI/I2C</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3><i class="fas fa-tools"></i> Development Tools</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">SolidWorks</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Research Interests Section -->
+            <section id="research" class="research-areas-section">
+              <div class="section-header">
+                <h2 class="section-title">
+                  <i class="fas fa-flask"></i>
+                  Research Interests
+                </h2>
+                <p class="section-subtitle">Exploring the frontiers of robotics and machine learning</p>
+              </div>
+
+              <div class="research-areas-grid">
+                <div class="research-card">
+                  <div class="research-icon">
+                    <i class="fas fa-brain"></i>
+                  </div>
+                  <h3 class="research-title">Vision-Language-Action Models</h3>
+                  <p class="research-description">End-to-end robot learning with VLA models for generalizable manipulation tasks.</p>
+                  <div class="research-tags">
+                    <span class="tag">VLA</span>
+                    <span class="tag">End-to-End</span>
+                  </div>
+                </div>
+
+                <div class="research-card">
+                  <div class="research-icon">
+                    <i class="fas fa-hand-paper"></i>
+                  </div>
+                  <h3 class="research-title">Robot Manipulation</h3>
+                  <p class="research-description">Developing algorithms for dexterous manipulation and robust grasping.</p>
+                  <div class="research-tags">
+                    <span class="tag">Grasping</span>
+                    <span class="tag">Dexterity</span>
+                  </div>
+                </div>
+
+                <div class="research-card">
+                  <div class="research-icon">
+                    <i class="fas fa-gamepad"></i>
+                  </div>
+                  <h3 class="research-title">Deep Reinforcement Learning</h3>
+                  <p class="research-description">Training robots to learn optimal behaviors through environment interactions.</p>
+                  <div class="research-tags">
+                    <span class="tag">RL</span>
+                    <span class="tag">Policy Learning</span>
+                  </div>
+                </div>
+
+                <div class="research-card">
+                  <div class="research-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                  </div>
+                  <h3 class="research-title">Sim-to-Real Transfer</h3>
+                  <p class="research-description">Bridging the gap between simulation training and real-world deployment.</p>
+                  <div class="research-tags">
+                    <span class="tag">Domain Adaptation</span>
+                    <span class="tag">Transfer</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+              <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+              <div class="contact-content">
+                <p>I am actively seeking research opportunities and collaborations. Feel free to reach out!</p>
+                <div class="contact-grid">
+                  <a href="mailto:1040831491@qq.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>1040831491@qq.com</span>
+                  </a>
+                  <a href="https://github.com/aetlywlp" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/aetlywlp</span>
+                  </a>
+                  <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Wuhan, Hubei, China</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
         </div>
-
-        <div class="research-areas-grid">
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h3 class="research-title">Deep Reinforcement Learning</h3>
-            <p class="research-description">Training robots to learn optimal behaviors through trial and error interactions with their environment.</p>
-            <div class="research-tags">
-              <span class="tag">RL</span>
-              <span class="tag">Policy Learning</span>
-            </div>
-          </div>
-
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-hand-paper"></i>
-            </div>
-            <h3 class="research-title">Manipulation & Grasping</h3>
-            <p class="research-description">Developing algorithms for dexterous manipulation and robust grasping in cluttered environments.</p>
-            <div class="research-tags">
-              <span class="tag">Grasping</span>
-              <span class="tag">Dexterity</span>
-            </div>
-          </div>
-
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            <h3 class="research-title">Computer Vision</h3>
-            <p class="research-description">Enabling robots to perceive and understand their surroundings through visual sensing and processing.</p>
-            <div class="research-tags">
-              <span class="tag">Perception</span>
-              <span class="tag">3D Vision</span>
-            </div>
-          </div>
-
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-route"></i>
-            </div>
-            <h3 class="research-title">Motion Planning</h3>
-            <p class="research-description">Designing efficient algorithms for robot path planning and trajectory optimization in complex spaces.</p>
-            <div class="research-tags">
-              <span class="tag">Planning</span>
-              <span class="tag">Navigation</span>
-            </div>
-          </div>
-
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <h3 class="research-title">Human-Robot Interaction</h3>
-            <p class="research-description">Creating intuitive interfaces and collaborative systems for safe human-robot cooperation.</p>
-            <div class="research-tags">
-              <span class="tag">HRI</span>
-              <span class="tag">Collaboration</span>
-            </div>
-          </div>
-
-          <div class="research-card">
-            <div class="research-icon">
-              <i class="fas fa-microchip"></i>
-            </div>
-            <h3 class="research-title">Sim-to-Real Transfer</h3>
-            <p class="research-description">Bridging the gap between simulation training and real-world robot deployment.</p>
-            <div class="research-tags">
-              <span class="tag">Simulation</span>
-              <span class="tag">Transfer</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Research Areas Section -->
-
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/14/person/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/bjqs.jpeg">
-      <meta itemprop="name" content="Li Haoxuan">
-      <meta itemprop="description" content="Undergraduate at HUST | Robotics & Embodied AI Researcher | Deputy Leader @ FOCUS Team">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lee Haoxuan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/14/person/" class="post-title-link" itemprop="url">person!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-11-14 11:46:10 / Modified: 11:50:07" itemprop="dateCreated datePublished" datetime="2024-11-14T11:46:10+08:00">2024-11-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>My name is Li Haoxuan, and I am currently pursuing a degree in Mechanical Design, Manufacturing, and Automation at Huazhong University of Science and Technology.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/bjqs.jpeg">
-      <meta itemprop="name" content="Li Haoxuan">
-      <meta itemprop="description" content="Undergraduate at HUST | Robotics & Embodied AI Researcher | Deputy Leader @ FOCUS Team">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lee Haoxuan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/13/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-11-13 23:14:02" itemprop="dateCreated datePublished" datetime="2024-11-13T23:14:02+08:00">2024-11-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-
-        <!-- Research Areas Quick Links -->
-        <div class="research-quick-links motion-element">
-          <h3>
-            <i class="fas fa-flask"></i>
-            Research Focus
-          </h3>
-          <ul class="research-links-list">
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Deep RL</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Manipulation</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Vision</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Planning</a></li>
-          </ul>
-        </div>
-
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Li Haoxuan"
-      src="/uploads/bjqs.jpeg">
-  <p class="site-author-name" itemprop="name">Li Haoxuan</p>
-  <div class="site-description" itemprop="description">Undergraduate at HUST | Robotics & Embodied AI Researcher | Deputy Leader @ FOCUS Team</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/aetlywlp" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;aetlywlp" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:1040831491@qq.com" title="E-Mail → mailto:1040831491@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
       </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Li Haoxuan</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
+        <div class="copyright">
+          &copy; 2025
+          <span class="with-love">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="author">李昊轩</span>
+          <span class="separator">|</span>
+          <span>Huazhong University of Science and Technology</span>
+        </div>
       </div>
     </footer>
+
   </div>
 
-  
+  <div class="back-to-top" style="display: none;">
+    <i class="fa fa-arrow-up"></i>
+  </div>
+
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
 
-<script src="/js/utils.js"></script>
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'flex';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-<script src="/js/motion.js"></script>
+    // Simple fade-in animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
 
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-<!-- Custom Effects -->
-<script src="/js/custom-effects.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
