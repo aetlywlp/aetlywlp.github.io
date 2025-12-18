@@ -954,3 +954,110 @@ hr {
   display: none;
 }
 
+/* ==================== About Page & Resume Styling ==================== */
+.post-body h2 {
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+  position: relative;
+}
+
+.post-body h2::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-tech);
+}
+
+.post-body h3 {
+  color: var(--accent-light);
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.post-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-body ul li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.post-body ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 10px;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.post-body strong {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.post-body em {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Profile Image Styling */
+.post-body img[alt="Li Haoxuan"] {
+  transition: all 0.3s ease;
+}
+
+.post-body img[alt="Li Haoxuan"]:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
+}
+
+/* Icon in Contact Section */
+.post-body .fa,
+.post-body .fab {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+/* Honors/Awards Section Enhancement */
+.post-body ul li:has(strong:contains("Prize")) {
+  background: rgba(51, 65, 85, 0.3);
+  border-left: 4px solid var(--accent-color);
+  padding: 15px 15px 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Skills Section Grid */
+.post-body ul li:has(strong:contains(":")) {
+  background: rgba(51, 65, 85, 0.2);
+  padding: 10px 15px 10px 30px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.post-body ul li:has(strong:contains(":")):hover {
+  background: rgba(6, 182, 212, 0.1);
+  transform: translateX(5px);
+}
+
+/* Professional Header for About Page */
+.post-body > div[style*="text-align: center"] {
+  background: rgba(51, 65, 85, 0.3);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
